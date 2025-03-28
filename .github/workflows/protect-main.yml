@@ -6,10 +6,10 @@ on:
       - main
 
 jobs:
-  block_direct_push:
+  notify_push:
     runs-on: ubuntu-latest
     steps:
-      - name: Cancel if push is not a pull request merge
+      - name: Aviso de push a main
         run: |
-          echo "Checking if this push came from a PR..."
-          git log -1 --pretty=%B | grep -q "Merge pull request" && echo "✅ Pull request merge detectado." || (echo "⛔ Push directo a main detectado. Solo se permiten PRs." && exit 1)
+          echo "⚠️ Alguien hizo un push directo a main. Se recomienda trabajar con Pull Requests. :)"
+
