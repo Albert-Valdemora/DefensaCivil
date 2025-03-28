@@ -7,10 +7,15 @@ on:
 
 jobs:
   block_direct_push:
-    if: github.event.head_commit.message != 'Merge pull request'
     runs-on: ubuntu-latest
     steps:
-      - name: Block direct push
+      - name: Detect and block manual pushes
         run: |
-          echo "⛔ ¡No se permite el envío directo a la rama principal! Usa una solicitud de extracción."
-          exit 1
+          echo "Pusher: ${{ github.actor }}"
+          if [ "${{ github.actor }}" != "web-flow" ]; then
+            echo "⛔ Push directo a main detectado. Solo se permiten Pull Requests."
+            exit 1
+          else
+            echo "✅ Pull request merge detectado. Aprobado."
+            exit 0
+          fi
