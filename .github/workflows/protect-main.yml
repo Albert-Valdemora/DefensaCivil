@@ -12,3 +12,4 @@ jobs:
       - name: Aviso de push a main
         run: |
           echo "⚠️ Alguien hizo un push directo a main. Se recomienda trabajar con Pull Requests. :)"
+
