@@ -1,50 +1,34 @@
-# Welcome to your Expo app 👋
+# DefensaCivil 🚨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada con **React Native + Expo**, orientada a apoyar la gestión de emergencias en la República Dominicana. Permite registrar eventos, emitir alertas y consultar información en tiempo real.
 
-## Get started
+## 🛠 Tecnologías usadas
 
-1. Install dependencies
+- React Native (con Expo)
+- TypeScript
+- GitHub Actions
 
-   ```bash
-   npm install
-   ```
+## 👥 Equipo
 
-2. Start the app
+- Albert Valdemora 
+- Adrian Saul Polanco Ferrer
+- David Bueno
+- Geremy Jose Ferran Ferreras
+- Ernesto Saviñon
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 🧪 Cómo correr el proyecto
 
 ```bash
-npm run reset-project
+git clone https://github.com/Albert-Valdemora/DefensaCivil.git
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+> Asegúrate de tener Node.js y Expo CLI instalados.
 
-## Learn more
+## ✅ Reglas del repositorio
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- 🚫 **Prohibido hacer push directo a `main`**. Usa ramas y Pull Requests.
+- 🧪 Cada feature nueva debe ir en una rama `feature/nombre`.
+- 🛠 Correcciones van en ramas `fix/nombre`.
+- 📂 Estructura organizada: componentes, constantes, hooks, scripts, etc.
