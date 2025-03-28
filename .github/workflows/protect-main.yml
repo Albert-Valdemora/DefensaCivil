@@ -9,13 +9,7 @@ jobs:
   block_direct_push:
     runs-on: ubuntu-latest
     steps:
-      - name: Detect and block manual pushes
+      - name: Cancel if push is not a pull request merge
         run: |
-          echo "Pusher: ${{ github.actor }}"
-          if [ "${{ github.actor }}" != "web-flow" ]; then
-            echo "⛔ Push directo a main detectado. Solo se permiten Pull Requests."
-            exit 1
-          else
-            echo "✅ Pull request merge detectado. Aprobado."
-            exit 0
-          fi
+          echo "Checking if this push came from a PR..."
+          git log -1 --pretty=%B | grep -q "Merge pull request" && echo "✅ Pull request merge detectado." || (echo "⛔ Push directo a main detectado. Solo se permiten PRs." && exit 1)
