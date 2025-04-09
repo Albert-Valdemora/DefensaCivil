@@ -5,42 +5,55 @@ import { Title, Text, Card } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView, TouchableOpacity } from "react-native-gesture-handler";
 
-const integrantes = [
-  /*{
-    nombre: "Diego Díaz",
-    correo: "diegodiaz300103@gmail.com",
-    telefono: "8098034952",
-    imagen: require("../../assets/images/diego.jpg"),
+const teamMembers = [
+  {
+    name: "Albert Valdemora",
+    email: "albertvaldemorat@gmail.com",
+    phone: "8499183303",
+    image: require("../../assets/images/albert.jpg"),
+    telegramUser: "AlbertDVSP"
   },
   {
-    nombre: "David Bueno",
-    correo: "david03bueno@gmail.com",
-    telefono: "8096109024",
-    imagen: require("../../assets/images/david.jpg"),
-  },*/
-  {
-    nombre: "Malvin Jiménez",
-    correo: "malvinjd09@gmail.com",
-    telefono: "8296242257",
-    imagen: require("../../assets/images/marvin.jpg"),
+    name: "Diego Díaz",
+    email: "diegodiaz300103@gmail.com",
+    phone: "8098034952",
+    image: require("../../assets/images/diego.jpg"),
+    telegramUser: "ddiaaz1"
   },
   {
-    nombre: "Ernesto Saviñón",
-    correo: "ernestonicolas2546@gmail.com",
-    telefono: "8099638979",
-    imagen: require("../../assets/images/ernesto.jpg"),
+    name: "David Bueno",
+    email: "david03bueno@gmail.com",
+    phone: "8096109024",
+    image: require("../../assets/images/luis.jpg"),
+    telegramUser: "David03Bueno"
   },
   {
-    nombre: "Geremy Ferran",
-    correo: "geremy.ferran.cem@gmail.com",
-    telefono: "8099296594",
-    imagen: require("../../assets/images/geremy.jpg"),
+    name: "Malvin Jiménez",
+    email: "malvinjd09@gmail.com",
+    phone: "8296242257",
+    image: require("../../assets/images/marvin.jpg"),
+    telegramUser: "Malvinjd"
   },
   {
-    nombre: "Adrian Polanco",
-    correo: "adferrer0611@gmail.com",
-    telefono: "8296748857",
-    imagen: require("../../assets/images/adrian.jpg"),
+    name: "Ernesto Saviñón",
+    email: "ernestonicolas2546@gmail.com",
+    phone: "8099638979",
+    image: require("../../assets/images/ernesto.jpg"),
+    telegramUser: "ErnestoSavinon"
+  },
+  {
+    name: "Geremy Ferran",
+    email: "geremy.ferran.cem@gmail.com",
+    phone: "8099296594",
+    image: require("../../assets/images/geremy.jpg"),
+    telegramUser: "g3r0_0"
+  },
+  {
+    name: "Adrian Polanco",
+    email: "adferrer0611@gmail.com",
+    phone: "8296748857",
+    image: require("../../assets/images/adrian.jpg"),
+    telegramUser: "apolancof"
   },
 ];
 
@@ -55,7 +68,7 @@ function Info() {
 
   const handleTelegram = (telefono: string) => {
     const user = telefono.replace(/\s/g, "");
-    Linking.openURL(`https://t.me/+1${user}`);
+    Linking.openURL(`https://t.me/${user}`);
   };
 
   return (
@@ -64,23 +77,23 @@ function Info() {
         <Title style={styles.title}>Acerca de esta aplicación</Title>
 
         <PagerView style={styles.pager} initialPage={0} orientation="horizontal">
-            {integrantes.map((persona, index) => (
+            {teamMembers.map((teamMember, index) => (
             <View style={styles.page} key={index}>
                 <Card style={styles.card}>
                 <Card.Content style={styles.cardContent}>
-                    <Image source={persona.imagen} style={styles.avatar} />
+                    <Image source={teamMember.image} style={styles.avatar} />
                     <View style={styles.info}>
-                    <Text style={styles.name}>{persona.nombre}</Text>
+                    <Text style={styles.name}>{teamMember.name}</Text>
 
-                    <TouchableOpacity onPress={() => handleEmail(persona.correo)}>
-                        <Text style={styles.link}>📧 {persona.correo}</Text>
+                    <TouchableOpacity onPress={() => handleEmail(teamMember.email)}>
+                        <Text style={styles.link}>📧 {teamMember.email}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => handleCall(persona.telefono)}>
-                        <Text style={styles.link}>📞 {persona.telefono}</Text>
+                    <TouchableOpacity onPress={() => handleCall(teamMember.phone)}>
+                        <Text style={styles.link}>📞 {teamMember.phone}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => handleTelegram(persona.telefono)}>
+                    <TouchableOpacity onPress={() => handleTelegram(teamMember.telegramUser)}>
                         <Text style={styles.link}>💬 Telegram</Text>
                     </TouchableOpacity>
                     </View>
