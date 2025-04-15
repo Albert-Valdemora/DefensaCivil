@@ -64,6 +64,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <FontAwesome name="users" size={28} color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="voluntario"
+        options={{
+          title: "Ser Voluntario",
+          tabBarLabel: "Voluntario",
+          tabBarIcon: ({ color }) => <FontAwesome name="hand-paper-o" size={28} color={color} />,
+        }}
+      />
     </Tabs>
   );
 }
