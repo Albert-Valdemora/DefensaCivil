@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     paddingTop: 40,
-    height: height
+    height: height,
+    marginTop: 30
   },
   title: {
     fontSize: 22,

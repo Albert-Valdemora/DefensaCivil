@@ -7,6 +7,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { FontAwesome } from "@expo/vector-icons"
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -45,6 +46,22 @@ export default function TabLayout() {
         options={{
           title: 'Acerca de...',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="info.bubble.fill.rtl" color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="medidas"
+        options={{
+          title: "Medidas Preventivas",
+          tabBarLabel: "Medidas",
+          tabBarIcon: ({ color }) => <FontAwesome name="shield" size={28} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="miembros"
+        options={{
+          title: "Miembros",
+          tabBarLabel: "Miembros",
+          tabBarIcon: ({ color }) => <FontAwesome name="users" size={28} color={color} />,
         }}
       />
     </Tabs>
