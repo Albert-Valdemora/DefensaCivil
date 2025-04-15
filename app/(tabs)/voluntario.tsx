@@ -14,10 +14,9 @@ import {
   Platform,
 } from "react-native"
 
-// Definir un tipo para los campos del formulario
 type FormField = "cedula" | "nombre" | "apellido" | "clave" | "correo" | "telefono"
 
-// Definir un tipo para el estado del formulario
+
 interface FormState {
   cedula: string
   nombre: string
@@ -141,7 +140,6 @@ export default function VoluntarioScreen() {
 
       if (result.exito) {
         setSuccessMessage(result.mensaje)
-        // Limpiar el formulario después de un registro exitoso
         setFormData({
           cedula: "",
           nombre: "",
@@ -154,20 +152,19 @@ export default function VoluntarioScreen() {
         Alert.alert("Error", result.mensaje || "Ocurrió un error al registrar el voluntario")
       }
     } catch (error) {
-      console.error("Error al enviar el formulario:", error)
       Alert.alert("Error", "Ocurrió un error al conectar con el servidor")
     } finally {
       setLoading(false)
     }
   }
 
-  // Corregir la función handleChange con tipos adecuados
+
   const handleChange = (field: FormField, value: string) => {
     setFormData({
       ...formData,
       [field]: value,
     })
-    // Limpiar el error cuando el usuario comienza a escribir
+ 
     if (errors[field]) {
       setErrors({
         ...errors,
