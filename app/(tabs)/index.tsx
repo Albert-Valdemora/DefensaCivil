@@ -1,9 +1,12 @@
-import { Image, StyleSheet, View, Text, Dimensions } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Image, StyleSheet, View, Text, Dimensions, Button } from 'react-native';
 import PagerView from 'react-native-pager-view';
 
 const { width, height } = Dimensions.get("window");
 
 export default function HomeScreen() {
+
+
   return (
     <View style={styles.container}>
     <Text style={styles.title}>Inicio - Defensa Civil</Text>

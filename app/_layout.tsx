@@ -32,13 +32,15 @@ export default function RootLayout() {
   return (
     <MedidaProvider>
       <MiembroProvider>
-        <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <ThemeProvider value={colorScheme === "light" ? DarkTheme : DefaultTheme}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="medida/[id]" options={{ title: "Detalle" }} />
+            <Stack.Screen name="auth" options={{ title: "Login" }} />
+            <Stack.Screen name="recuperarContrasena" options={{ title: "Recuperar" }} />
             <Stack.Screen name="+not-found" options={{ title: "Oops!" }} />
           </Stack>
-          <StatusBar style="auto" />
+          <StatusBar style="dark" />
         </ThemeProvider>
       </MiembroProvider>
     </MedidaProvider>
