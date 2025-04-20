@@ -79,6 +79,12 @@ const BurgerMenu = () => {
   const unauthenticatedMenuItems = [
     { label: 'Iniciar Sesión', route: '/auth/login' },
   ];
+  const servicios = [
+    { label: 'Servicios', route: '/(tabs)/servicios' },
+  ];
+  const videos = [
+    { label: 'Videos', route: '/(tabs)/videos' },
+  ];
 
   const menuTranslateX = animation.interpolate({
     inputRange: [0, 1],
@@ -143,6 +149,24 @@ const BurgerMenu = () => {
         </View>
         
         {menuItems.map((item) => (
+          <TouchableOpacity
+            key={item.label}
+            style={styles.menuItem}
+            onPress={() => handleNavigation(item.route)}
+          >
+            <Text style={styles.menuText}>{item.label}</Text>
+          </TouchableOpacity>
+        ))}
+        {servicios.map((item) => (
+          <TouchableOpacity
+            key={item.label}
+            style={styles.menuItem}
+            onPress={() => handleNavigation(item.route)}
+          >
+            <Text style={styles.menuText}>{item.label}</Text>
+          </TouchableOpacity>
+        ))}
+        {videos.map((item) => (
           <TouchableOpacity
             key={item.label}
             style={styles.menuItem}
