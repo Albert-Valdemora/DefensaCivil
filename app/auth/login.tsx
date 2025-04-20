@@ -2,7 +2,7 @@ import React, { useState } from 'react';
  import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
  import { Link, useRouter } from 'expo-router';
  import useAuthStore from '@/store/useAuthStore';
- import { LoginResponse } from '../types';
+ import { LoginResponse } from '../../types/types';
  
  export default function LoginScreen() {
    const router = useRouter();

@@ -16,6 +16,7 @@ Aplicación móvil desarrollada con **React Native + Expo**, orientada a apoyar 
 - Geremy Jose Ferran Ferreras
 - Ernesto Saviñon
 - Malvin Jimenez
+- Diego Díaz
 
 ## 🧪 Cómo correr el proyecto
 
