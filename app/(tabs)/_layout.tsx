@@ -3,6 +3,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import BurgerMenu from '@/components/BurgerMenu';
 
+
 export default function TabLayout() {
   return (
     <View style={styles.container}>
@@ -20,6 +21,7 @@ export default function TabLayout() {
           <Stack.Screen name="miembros" />
           <Stack.Screen name="voluntario" />
           <Stack.Screen name="cambiarContrasena" />
+          <Stack.Screen name="mapaSituaciones" />
           <Stack.Screen name="albergues" />
           <Stack.Screen name="mapa" />
           <Stack.Screen name="albergues/[id]" />
