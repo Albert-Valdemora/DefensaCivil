@@ -74,7 +74,7 @@ const BurgerMenu = () => {
     { label: 'Noticias', route: '/(tabs)/noticias' },
     { label: 'Reportar Situación', route: '/(tabs)/reportar' },
     { label: 'Mis Situación', route: '/(tabs)/situaciones' },
-    { label: 'Mapa Situaciones', route: '/(tabs)/mapa' },
+    { label: 'Mapa Situaciones', route: '/(tabs)/mapaSituaciones' },
     { label: 'Cambiar Contraseña', route: '/(tabs)/cambiarContrasena' },
   ];
 

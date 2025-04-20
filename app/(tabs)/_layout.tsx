@@ -21,7 +21,7 @@ export default function TabLayout() {
           <Stack.Screen name="miembros" />
           <Stack.Screen name="voluntario" />
           <Stack.Screen name="cambiarContrasena" />
-          <Stack.Screen name="mapa" />
+          <Stack.Screen name="mapaSituaciones" />
         </Stack>
       </View>
     </View>
