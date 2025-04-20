@@ -1,5 +1,6 @@
 export type RootStackParamList = {
   "(tabs)": undefined
+  "/(tabs)/albergue/[id]": { id: string; albergue: string };
   "/(tabs)/medidas": undefined
   "/(tabs)/medidas/[id]": { id: string }
   "+not-found": undefined
