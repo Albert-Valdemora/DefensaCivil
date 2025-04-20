@@ -85,7 +85,6 @@ export default function MapaSituacionesScreen() {
         ))}
       </MapView>
 
-      {/* Callout personalizado como modal */}
       {selectedMarker && (
         <View style={styles.calloutContainer}>
           <View style={styles.calloutContent}>
