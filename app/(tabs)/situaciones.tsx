@@ -7,7 +7,7 @@ interface SituacionItem {
   titulo: string;
   descripcion: string;
   fecha: string;
-  foto?: string; // Este campo vendrá en Base64
+  foto?: string; 
   estado: string;
   comentarios?: string;
 }

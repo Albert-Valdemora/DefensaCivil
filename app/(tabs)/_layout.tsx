@@ -2,7 +2,7 @@ import { Stack } from 'expo-router';
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import BurgerMenu from '@/components/BurgerMenu';
-import DetalleSituacion from '@/app/(tabs)/DetalleSituacion';
+
 
 export default function TabLayout() {
   return (
@@ -21,6 +21,7 @@ export default function TabLayout() {
           <Stack.Screen name="miembros" />
           <Stack.Screen name="voluntario" />
           <Stack.Screen name="cambiarContrasena" />
+          <Stack.Screen name="mapa" />
         </Stack>
       </View>
     </View>
