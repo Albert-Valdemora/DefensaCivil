@@ -73,6 +73,7 @@ const BurgerMenu = () => {
   const authenticatedMenuItems = [
     { label: 'Noticias', route: '/(tabs)/noticias' },
     { label: 'Reportar Situación', route: '/(tabs)/reportar' },
+    { label: 'Mis Situación', route: '/(tabs)/situaciones' },
     { label: 'Cambiar Contraseña', route: '/(tabs)/cambiarContrasena' },
   ];
 
