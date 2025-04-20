@@ -22,6 +22,9 @@ export default function TabLayout() {
           <Stack.Screen name="voluntario" />
           <Stack.Screen name="cambiarContrasena" />
           <Stack.Screen name="mapaSituaciones" />
+          <Stack.Screen name="albergues" />
+          <Stack.Screen name="mapa" />
+          <Stack.Screen name="albergues/[id]" />
         </Stack>
       </View>
     </View>
