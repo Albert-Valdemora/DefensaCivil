@@ -24,6 +24,8 @@ export default function TabLayout() {
           <Stack.Screen name="mapaSituaciones" />
           <Stack.Screen name="albergues" />
           <Stack.Screen name="mapa" />
+          <Stack.Screen name="servicios" />
+          <Stack.Screen name="videos" />
           <Stack.Screen name="albergues/[id]" />
         </Stack>
       </View>
